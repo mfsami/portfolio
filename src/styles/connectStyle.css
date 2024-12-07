@@ -38,11 +38,6 @@
   height: 30px;
 }
 
-.message input {
-  width: 620px;
-  height: 150px;
-}
-
 input {
   border: 2px solid rgba(255, 255, 255, 0.329);
   background-color: #101010;
@@ -58,4 +53,14 @@ input {
   font-size: 20px;
   font-weight: 600;
   text-align: center;
+}
+
+.message textarea {
+  resize: none;
+  width: 620px;
+  height: 150px;
+
+  border: 2px solid rgba(255, 255, 255, 0.329);
+  background-color: #101010;
+  border-radius: 5px;
 }

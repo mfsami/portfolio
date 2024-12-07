@@ -9,7 +9,7 @@ const App = () => {
           <h1 className="Hi">
             Hi, my name is <span className="bold600">Sami.</span>
           </h1>
-          <div class="subheader">
+          <div className="subheader">
             <h2 className="facts">
               I'm an
               <span className="bold600"> independent creative developer </span>
