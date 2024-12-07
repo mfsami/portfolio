@@ -9,6 +9,10 @@ const Connect = () => {
       </div>
       <form className="form">
         <div className="email">
+          <label for="name">Your name</label>
+          <input type="text" id="name" name="name"></input>
+        </div>
+        <div className="email">
           <label for="email">Your email</label>
           <input type="text" id="email" name="email"></input>
         </div>
@@ -18,7 +22,8 @@ const Connect = () => {
           <input type="text" id="message" name="message"></input>
         </div>
       </form>
-      <div className="send">SEND</div>
+
+      <button className="send">SEND</button>
     </div>
   );
 };
