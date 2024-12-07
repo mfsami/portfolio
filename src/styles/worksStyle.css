@@ -10,7 +10,7 @@
   margin: 0 auto;
   height: auto;
   width: 100%;
-  margin-bottom: 100px;
+  margin-bottom: 200px;
 }
 
 /* Header style */
@@ -46,7 +46,7 @@
 
 /* Line style */
 .line {
-  border-top: 1px solid #525252;
+  border-top: 1px solid #313131;
   margin: 20px 0;
   width: 100%;
 }

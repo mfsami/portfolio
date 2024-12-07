@@ -13,25 +13,25 @@ const Works = () => {
       </div>
       <div className="line"></div>
       <a href="https://github.com/mfsami" className="work-item translateFX">
-        <h3 className="work-text">Project Title 1</h3>
+        <h3 className="work-text">VR SPACE EXPLORATION</h3>
       </a>
 
       <div className="line"></div>
 
       <a href="https://github.com/mfsami" className="work-item translateFX">
-        <h3 className="work-text">Project Title 1</h3>
+        <h3 className="work-text">LUCIDITY</h3>
       </a>
 
       <div className="line"></div>
 
       <a href="https://github.com/mfsami" className="work-item translateFX">
-        <h3 className="work-text">Project Title 1</h3>
+        <h3 className="work-text">WSL</h3>
       </a>
 
       <div className="line"></div>
 
       <a href="https://github.com/mfsami" className="work-item translateFX">
-        <h3 className="work-text">Project Title 1</h3>
+        <h3 className="work-text">PROJECT</h3>
       </a>
 
       <div className="line"></div>
