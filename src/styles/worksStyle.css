@@ -15,7 +15,7 @@
 
 /* Header style */
 .works-header {
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 50;
   margin-bottom: 50px;
   text-align: left;
@@ -30,8 +30,18 @@
 }
 
 .asteriksIMG {
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
+  animation: rotation 4s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
 }
 
 /* Line style */
@@ -48,4 +58,41 @@
   padding: 0;
   text-align: left;
   width: 100%;
+}
+
+.work-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  animation: transformBack 0.3s ease-out forwards;
+}
+
+.translateFX:hover {
+  animation: transform 0.3s ease-out forwards;
+}
+
+@keyframes transform {
+  from {
+    transform: translate(0px, 0px);
+  }
+  to {
+    transform: translate(20px, 0px);
+  }
+}
+
+@keyframes transformBack {
+  from {
+    transform: translate(20px, 0px);
+  }
+  to {
+    transform: translate(0px, 0px);
+  }
+}
+
+a:visited {
+  text-decoration: none;
+  color: inherit;
 }

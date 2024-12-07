@@ -12,20 +12,27 @@ const Works = () => {
         </div>
       </div>
       <div className="line"></div>
-
-      <h3 className="work-text">Project Title 1</h3>
-
-      <div className="line"></div>
-
-      <h3 className="work-text">Project Title 2</h3>
+      <a href="https://github.com/mfsami" className="work-item translateFX">
+        <h3 className="work-text">Project Title 1</h3>
+      </a>
 
       <div className="line"></div>
 
-      <h3 className="work-text">Project Title 3</h3>
+      <a href="https://github.com/mfsami" className="work-item translateFX">
+        <h3 className="work-text">Project Title 1</h3>
+      </a>
 
       <div className="line"></div>
 
-      <h3 className="work-text">Project Title 4</h3>
+      <a href="https://github.com/mfsami" className="work-item translateFX">
+        <h3 className="work-text">Project Title 1</h3>
+      </a>
+
+      <div className="line"></div>
+
+      <a href="https://github.com/mfsami" className="work-item translateFX">
+        <h3 className="work-text">Project Title 1</h3>
+      </a>
 
       <div className="line"></div>
     </div>
