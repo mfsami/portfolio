@@ -1,22 +1,26 @@
 import React from "react";
 import "../styles/homeStyle.css";
 import dude from "../assets/images/luhdude.svg";
+import textReveal from "../components/textReveal";
 
 const App = () => {
+  useEffect(() => {
+    splitLines(".reveal-text");
+  }, []);
   return (
     <div className="section1">
       <div className="headerLogoContainer">
         <div className="headersText">
-          <h1 className="Hi">
+          <h1 className="Hi reveal-text">
             Hi, my name is <span className="bold600">Sami.</span>
           </h1>
           <div className="subheader">
-            <h2 className="facts">
+            <h2 className="facts reveal-text">
               I'm an
               <span className="bold600"> independent creative developer </span>
               from
             </h2>
-            <h2 className="facts">Edmonton, Alberta.</h2>
+            <h2 className="facts reveal-text">Edmonton, Alberta.</h2>
           </div>
         </div>
         {/* Image wold be cool to get one of me in this style */}
