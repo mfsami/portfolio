@@ -64,3 +64,15 @@ input {
   background-color: #101010;
   border-radius: 5px;
 }
+
+textarea:focus {
+  border: 2px solid #c5c5c5; /* Change the border color */
+  outline: none;
+  box-shadow: 0 0 5px rgb(255, 253, 253); /* Add a glowing effect */
+}
+
+input:focus {
+  border: 2px solid #c5c5c5; /* Change the border color */
+  outline: none;
+  box-shadow: 0 0 5px rgb(255, 253, 253); /* Add a glowing effect */
+}

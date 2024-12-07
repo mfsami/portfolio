@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/homeStyle.css";
+import dude from "../assets/images/luhdude.svg";
 
 const App = () => {
   return (
@@ -18,7 +19,10 @@ const App = () => {
             <h2 className="facts">Edmonton, Alberta.</h2>
           </div>
         </div>
-        <div className="logo"></div>
+        {/* Image wold be cool to get one of me in this style */}
+        <div className="logo">
+          <img src={dude} alt="dude" width="600" height="600" />
+        </div>
       </div>
 
       <div className="links">
