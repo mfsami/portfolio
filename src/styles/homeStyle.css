@@ -6,32 +6,35 @@ body {
 /* TOP SECTION */
 
 .section1 {
-  height: 100vh; /* Full viewport height to ensure it's centered on the page */
+  min-height: 100vh;
   width: 100vw;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .headersText {
   color: white;
   display: flex;
   flex-direction: column;
-  gap: 40px;
-  /* margin-left: 300px; */
+  gap: 10px;
 }
 
 .headerLogoContainer {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center; /* Center horizontally */
   gap: 60px;
-  margin-left: 300px;
+  width: 100%; /* Take full width */
+  max-width: 1200px; /* Optional: limit max width */
 }
 
 .bold600 {
   font-weight: 600;
+  display: inline; /* Ensures span doesn't break the line */
 }
 
 .Hi {
@@ -39,6 +42,7 @@ body {
   font-size: 75px;
   margin: 0;
   padding: 0;
+  white-space: nowrap; /* Prevents text from wrapping */
 }
 
 .facts {
@@ -54,16 +58,15 @@ body {
 }
 
 .links {
-  background-color: white;
-  width: 50px;
-  height: 100px;
-  margin: 0;
-  padding: 0;
+  position: absolute; /* Position links absolutely */
+  top: 80px; /* Distance from top */
+  left: 80px; /* Distance from left */
+  display: flex;
+  gap: 10px; /* Space between links */
+  z-index: 10; /* Ensure links are above other content */
 }
-
 .githubLink,
 .linkedLink {
-  background-color: rgb(255, 255, 255);
   width: 50px;
   height: 50%;
   display: flex;
