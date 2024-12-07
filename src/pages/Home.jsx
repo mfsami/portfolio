@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "../styles/homeStyle.css";
 import dude from "../assets/images/luhdude.svg";
+import Typewriter from "typewriter-effect/dist/core";
 
 const App = () => {
   const [revealTexts, setRevealTexts] = useState({
@@ -8,11 +9,21 @@ const App = () => {
     detailsBlock: false,
   });
 
+  const typewriterElement = useRef(null);
+
+  const sentences = [
+    "I'm an independent creative developer.",
+    "I love building innovative web applications.",
+    "I'm passionate about learning new technologies.",
+    "I enjoy collaborating on creative projects.",
+    "Currently based in Edmonton, Alberta.",
+  ];
+
   useEffect(() => {
     // Stagger the reveal of different text blocks
     const revealTimeline = [
       { key: "introBlock", delay: 500 },
-      { key: "detailsBlock", delay: 2500 }, //Adjust for delay before second reveal
+      { key: "detailsBlock", delay: 2500 }, // Delay before second reveal
     ];
 
     revealTimeline.forEach(({ key, delay }) => {
@@ -22,6 +33,28 @@ const App = () => {
 
       return () => clearTimeout(timer);
     });
+
+    // initial delay
+    const typewriterDelay = setTimeout(() => {
+      if (typewriterElement.current) {
+        const typewriter = new Typewriter(typewriterElement.current, {
+          loop: true,
+          delay: 30, // Typing speed here
+        });
+
+        sentences.forEach((sentence, index) => {
+          typewriter
+            .typeString(sentence)
+            .pauseFor(2000) // Pause after typed
+            .deleteAll(); // Reset for the next sentence
+        });
+
+        typewriter.start();
+      }
+    }, 3000); // Delay before starting the typewriter effect
+
+    // Cleanup the timeout
+    return () => clearTimeout(typewriterDelay);
   }, []);
 
   return (
@@ -67,14 +100,13 @@ const App = () => {
             }`}>
             <div className="subheader">
               <h2 className="facts">
-                I'm an
-                <span className="bold600">
-                  {" "}
-                  independent creative developer{" "}
-                </span>
-                from
+                <span
+                  id="app"
+                  className="bold600"
+                  ref={typewriterElement}></span>
+                {/* The typewriter effect will run here */}
               </h2>
-              <h2 className="facts">Edmonton, Alberta.</h2>
+              <h2 className="facts">Based in Canada.</h2>
             </div>
           </div>
         </div>
