@@ -1,34 +1,60 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../styles/homeStyle.css";
 import dude from "../assets/images/luhdude.svg";
-import textReveal from "../components/textReveal";
 
 const App = () => {
+  const [revealTexts, setRevealTexts] = useState({
+    introBlock: false,
+    detailsBlock: false,
+  });
+
   useEffect(() => {
-    splitLines(".reveal-text");
+    // Stagger the reveal of different text blocks
+    const revealTimeline = [
+      { key: "introBlock", delay: 500 },
+      { key: "detailsBlock", delay: 2500 }, //Adjust for delay before second reveal
+    ];
+
+    revealTimeline.forEach(({ key, delay }) => {
+      const timer = setTimeout(() => {
+        setRevealTexts((prev) => ({ ...prev, [key]: true }));
+      }, delay);
+
+      return () => clearTimeout(timer);
+    });
   }, []);
+
   return (
     <div className="section1">
       <div className="headerLogoContainer">
         <div className="headersText">
-          <h1 className="Hi reveal-text">
-            Hi, my name is <span className="bold600">Sami.</span>
-          </h1>
-          <div className="subheader">
-            <h2 className="facts reveal-text">
-              I'm an
-              <span className="bold600"> independent creative developer </span>
-              from
-            </h2>
-            <h2 className="facts reveal-text">Edmonton, Alberta.</h2>
+          <div
+            className={`introBlock ${revealTexts.introBlock ? "reveal" : ""}`}>
+            <h1 className="Hi">
+              Hi, my name is <span className="bold600">Sami.</span>
+            </h1>
+          </div>
+          <div
+            className={`detailsBlock ${
+              revealTexts.detailsBlock ? "reveal" : ""
+            }`}>
+            <div className="subheader">
+              <h2 className="facts">
+                I'm an
+                <span className="bold600">
+                  {" "}
+                  independent creative developer{" "}
+                </span>
+                from
+              </h2>
+              <h2 className="facts">Edmonton, Alberta.</h2>
+            </div>
           </div>
         </div>
-        {/* Image wold be cool to get one of me in this style */}
         <div className="logo">
           <img src={dude} alt="dude" width="600" height="600" />
         </div>
       </div>
-
       <div className="links">
         <div className="githubLink">
           <a
@@ -36,7 +62,6 @@ const App = () => {
             className="box-link"
             target="_blank"
             rel="noopener noreferrer">
-            {/* GitHub SVG Logo */}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"

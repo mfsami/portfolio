@@ -70,3 +70,24 @@ body {
   align-items: center;
   justify-content: center;
 }
+
+/* Text Reveal Animation */
+.introBlock,
+.detailsBlock {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Entire blocks will animate together, including spans */
+.introBlock,
+.detailsBlock,
+.introBlock .bold600,
+.detailsBlock .bold600 {
+  transition: all 0.8s ease;
+}

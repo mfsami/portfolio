@@ -1,4 +1,9 @@
-window.addEventListener("load", function () {
+import { gsap, Power3 } from "gsap";
+
+import { ScrollTrigger } from "gsap/ScrollTrigger"; // If you're using ScrollTrigger
+gsap.registerPlugin(ScrollTrigger); // Register the ScrollTrigger plugin
+
+export const textReveal = function (selector) {
   let splitWords = function (selector) {
     var elements = document.querySelectorAll(selector);
 
@@ -18,26 +23,6 @@ window.addEventListener("load", function () {
     });
   };
 
-  let splitLines = function (selector) {
-    var elements = document.querySelectorAll(selector);
-
-    splitWords(selector);
-
-    elements.forEach(function (el) {
-      var lines = getLines(el);
-
-      var wrappedLines = "";
-      lines.forEach(function (wordsArr) {
-        wrappedLines += '<span class="line"><span class="words">';
-        wordsArr.forEach(function (word) {
-          wrappedLines += word.outerHTML;
-        });
-        wrappedLines += "</span></span>";
-      });
-      el.innerHTML = wrappedLines;
-    });
-  };
-
   let getLines = function (el) {
     var lines = [];
     var line;
@@ -46,10 +31,8 @@ window.addEventListener("load", function () {
     for (var i = 0; i < words.length; i++) {
       var word = words[i];
       if (word.offsetTop != lastTop) {
-        // Don't start with whitespace
         if (!word.classList.contains("whitespace")) {
           lastTop = word.offsetTop;
-
           line = [];
           lines.push(line);
         }
@@ -59,12 +42,26 @@ window.addEventListener("load", function () {
     return lines;
   };
 
-  splitLines(".reveal-text");
+  let elements = document.querySelectorAll(selector);
+  splitWords(selector);
 
-  let revealText = document.querySelectorAll(".reveal-text");
+  elements.forEach(function (el) {
+    var lines = getLines(el);
 
+    var wrappedLines = "";
+    lines.forEach(function (wordsArr) {
+      wrappedLines += '<span class="line"><span class="words">';
+      wordsArr.forEach(function (word) {
+        wrappedLines += word.outerHTML;
+      });
+      wrappedLines += "</span></span>";
+    });
+    el.innerHTML = wrappedLines;
+  });
+
+  let revealText = document.querySelectorAll(selector);
   gsap.registerPlugin(ScrollTrigger);
-  let revealLines = revealText.forEach((element) => {
+  revealText.forEach((element) => {
     const lines = element.querySelectorAll(".words");
 
     let tl = gsap.timeline({
@@ -73,6 +70,7 @@ window.addEventListener("load", function () {
         toggleActions: "restart none none reset",
       },
     });
+
     tl.set(element, { autoAlpha: 1 });
     tl.from(lines, 1, {
       yPercent: 100,
@@ -81,4 +79,4 @@ window.addEventListener("load", function () {
       delay: 0.2,
     });
   });
-});
+};
