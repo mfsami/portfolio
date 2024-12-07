@@ -1,0 +1,76 @@
+body {
+  background-color: #101010;
+  font-family: "Instrument Sans", sans-serif;
+}
+
+/* TOP SECTION */
+
+.section1 {
+  height: 100vh; /* Full viewport height to ensure it's centered on the page */
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.headersText {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  /* margin-left: 300px; */
+}
+
+.headerLogoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 130px;
+  margin-left: 190px;
+}
+
+.bold600 {
+  font-weight: 600;
+}
+
+.Hi {
+  font-weight: 400;
+  font-size: 75px;
+  margin: 0;
+  padding: 0;
+}
+
+.facts {
+  font-size: 25px;
+  font-weight: 400;
+  font-size: 22px;
+  margin: 0;
+  padding: 0;
+}
+
+.logo {
+  width: 500px;
+  height: 500px;
+  border-radius: 80px;
+  background-color: #ddd;
+  margin: 0;
+}
+
+.links {
+  background-color: white;
+  width: 50px;
+  height: 100px;
+  margin: 0;
+  padding: 0;
+}
+
+.githubLink,
+.linkedLink {
+  background-color: rgb(255, 255, 255);
+  width: 50px;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
