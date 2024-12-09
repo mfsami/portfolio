@@ -6,15 +6,9 @@ import Connect from "./pages/Connect"; // Import Connect component
 const App = () => {
   return (
     <div>
-      <div className="home">
-        <Home />
-      </div>
-      <div className="works">
-        <Works />
-      </div>
-      <div className="connect">
-        <Connect />
-      </div>
+      <Home />
+      <Works />
+      <Connect />
     </div>
   );
 };

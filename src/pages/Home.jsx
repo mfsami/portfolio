@@ -51,7 +51,7 @@ const App = () => {
 
         typewriter.start();
       }
-    }, 3000); // Delay before starting the typewriter effect
+    }, 0); // Delay before starting the typewriter effect
 
     // Cleanup the timeout
     return () => clearTimeout(typewriterDelay);
