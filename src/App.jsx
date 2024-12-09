@@ -1,7 +1,7 @@
 import React from "react";
-import Home from "./pages/Home"; // Import Home component
-import Works from "./pages/Works"; // Import Works component
-import Connect from "./pages/Connect"; // Import Connect component
+import Home from "./components/Intro"; // Import Home component
+import Works from "./components/Works"; // Import Works component
+import Connect from "./components/Connect"; // Import Connect component
 
 const App = () => {
   return (

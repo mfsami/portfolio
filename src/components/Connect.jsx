@@ -1,4 +1,4 @@
-import { sendEmail } from "../components/emai";
+import { sendEmail } from "../javascript/emai";
 
 // src/pages/Connect.jsx
 import React, { useState } from "react";
