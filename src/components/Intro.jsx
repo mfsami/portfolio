@@ -3,7 +3,7 @@ import "../styles/homeStyle.css";
 import dude from "../assets/images/luhdude.svg";
 import Typewriter from "typewriter-effect/dist/core";
 
-const App = () => {
+const Intro = () => {
   const [revealTexts, setRevealTexts] = useState({
     introBlock: false,
     detailsBlock: false,
@@ -118,4 +118,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Intro;
