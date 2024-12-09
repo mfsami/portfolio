@@ -26,7 +26,7 @@ const Works = () => {
       <div className="line"></div>
 
       <Link to="/WSL" className="work-item translateFX">
-        <h3 className="work-text">SOCCER LEAGUE </h3>
+        <h3 className="work-text">WSL</h3>
       </Link>
 
       <div className="line"></div>
