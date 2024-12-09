@@ -1,0 +1,59 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  height: 200vh;
+  overflow: hidden;
+}
+
+.textContainer {
+  position: fixed;
+  top: 40%;
+  left: 50px;
+  transform: translateY(-50%);
+  width: 50%;
+  z-index: 10;
+  color: white;
+}
+
+.header {
+  font-weight: 450;
+  font-size: 70px;
+}
+
+.description {
+  margin-top: 20px;
+  width: 60%;
+  color: rgb(197, 196, 196);
+}
+
+.textImages {
+  display: flex;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.projectImages {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.placeholder {
+  background-color: rgb(39, 39, 39);
+  width: 800px;
+  height: 3000px;
+  margin-left: 800px;
+}
+
+.project-tags {
+  margin: 1rem 0;
+}
+
+.project-tag {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  margin-right: 0.5rem;
+  background-color: #252525;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+}

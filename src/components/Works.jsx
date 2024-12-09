@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/worksStyle.css";
 import asteriks from "../assets/images/asteriks.png";
+import { Link } from "react-router-dom";
 
 const Works = () => {
   return (
@@ -12,27 +13,27 @@ const Works = () => {
         </div>
       </div>
       <div className="line"></div>
-      <a href="https://github.com/mfsami" className="work-item translateFX">
+      <Link to="/SpaceVR" className="work-item translateFX">
         <h3 className="work-text">VR SPACE EXPLORATION</h3>
-      </a>
+      </Link>
 
       <div className="line"></div>
 
-      <a href="https://github.com/mfsami" className="work-item translateFX">
+      <Link to="/Lucidity" className="work-item translateFX">
         <h3 className="work-text">LUCIDITY</h3>
-      </a>
+      </Link>
 
       <div className="line"></div>
 
-      <a href="https://github.com/mfsami" className="work-item translateFX">
-        <h3 className="work-text">WSL</h3>
-      </a>
+      <Link to="/WSL" className="work-item translateFX">
+        <h3 className="work-text">SOCCER LEAGUE </h3>
+      </Link>
 
       <div className="line"></div>
 
-      <a href="https://github.com/mfsami" className="work-item translateFX">
+      <Link to="/WSL" className="work-item translateFX">
         <h3 className="work-text">PROJECT</h3>
-      </a>
+      </Link>
 
       <div className="line"></div>
     </div>

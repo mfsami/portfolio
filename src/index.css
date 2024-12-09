@@ -29,13 +29,3 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-/* Ensure html and body take full height */
-html,
-body {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center; /* Horizontally centers content */
-  align-items: flex-start; /* Vertically aligns content to the top */
-}
