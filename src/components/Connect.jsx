@@ -29,7 +29,7 @@ const Connect = () => {
   };
 
   return (
-    <div className="container">
+    <div className="headerForm">
       <div className="header">
         Lets <span className="bold600">connect.</span>
       </div>
