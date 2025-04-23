@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const Works = () => {
   return (
-    <div className="works-container">
+    <div id="works" className="works-container">
       <div className="works-header">
         <div className="combo">
           <img className="asteriksIMG" src={asteriks} alt="Logo" />

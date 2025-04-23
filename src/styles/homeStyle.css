@@ -73,6 +73,11 @@ body {
   align-items: center;
   justify-content: center;
 }
+.githubLink:hover,
+.linkedLink:hover {
+  transition: all 0.3s ease;
+  transform: translateY(-2px);
+}
 
 /* Text Reveal Animation */
 .introBlock,
@@ -93,4 +98,29 @@ body {
 .introBlock .bold600,
 .detailsBlock .bold600 {
   transition: all 0.8s ease;
+}
+
+/* NAVIGATION HEADER */
+.navigation {
+  position: absolute;
+  top: 80px;
+  right: 80px;
+  display: flex;
+  gap: 40px;
+  z-index: 10;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding-bottom: 5px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  transform: translateY(-2px);
 }
