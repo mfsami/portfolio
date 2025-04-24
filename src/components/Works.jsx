@@ -2,8 +2,12 @@ import React from "react";
 import "../styles/worksStyle.css";
 import asteriks from "../assets/images/asteriks.png";
 import { Link } from "react-router-dom";
+import { useIntersectionObserver } from "../javascript/useIntersectionObserver";
 
 const Works = () => {
+  const { addToRefs } = useIntersectionObserver({
+    threshold: 0.01,
+  });
   return (
     <div id="works" className="works-container">
       <div className="works-header">
@@ -14,25 +18,33 @@ const Works = () => {
       </div>
       <div className="line"></div>
       <Link to="/SpaceVR" className="work-item translateFX">
-        <h3 className="work-text">VR SPACE EXPLORATION</h3>
+        <h3 ref={addToRefs} className="work-text hidden delay-1">
+          VR SPACE EXPLORATION
+        </h3>
       </Link>
 
       <div className="line"></div>
 
       <Link to="/Lucidity" className="work-item translateFX">
-        <h3 className="work-text">LUCIDITY</h3>
+        <h3 ref={addToRefs} className="work-text hidden delay-2">
+          LUCIDITY
+        </h3>
       </Link>
 
       <div className="line"></div>
 
       <Link to="/WSL" className="work-item translateFX">
-        <h3 className="work-text">WSL</h3>
+        <h3 ref={addToRefs} className="work-text hidden delay-3">
+          WSL
+        </h3>
       </Link>
 
       <div className="line"></div>
 
       <Link to="/WSL" className="work-item translateFX">
-        <h3 className="work-text">PROJECT</h3>
+        <h3 ref={addToRefs} className="work-text hidden delay-4">
+          PROJECT
+        </h3>
       </Link>
 
       <div className="line"></div>

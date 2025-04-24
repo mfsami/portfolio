@@ -62,7 +62,7 @@ body {
   top: 80px; /* Distance from top */
   left: 80px; /* Distance from left */
   display: flex;
-  gap: 10px; /* Space between links */
+  gap: 5px; /* Space between links */
   z-index: 10; /* Ensure links are above other content */
 }
 .githubLink,
@@ -102,7 +102,8 @@ body {
 
 /* NAVIGATION HEADER */
 .navigation {
-  position: absolute;
+  position: fixed;
+  /* position: absolute; */
   top: 80px;
   right: 80px;
   display: flex;
