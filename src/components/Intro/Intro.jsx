@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import "../styles/homeStyle.css";
-import dude from "../assets/images/luhdude.svg";
+import "./Intro.css";
+import dude from "../../assets/images/luhdude.svg";
 import Typewriter from "typewriter-effect/dist/core";
 
 const Intro = () => {
@@ -127,7 +127,6 @@ const Intro = () => {
                   id="app"
                   className="bold600"
                   ref={typewriterElement}></span>
-                {/* The typewriter effect will run here */}
               </h2>
               <h2 className="facts">Based in Canada.</h2>
             </div>

@@ -1,8 +1,8 @@
 import React from "react";
-import "../styles/worksStyle.css";
-import asteriks from "../assets/images/asteriks.png";
+import "./Works.css";
+import asteriks from "../../assets/images/asteriks.png";
 import { Link } from "react-router-dom";
-import { useIntersectionObserver } from "../javascript/useIntersectionObserver";
+import { useIntersectionObserver } from "../../utils/useIntersectionObserver";
 
 const Works = () => {
   const { addToRefs } = useIntersectionObserver({

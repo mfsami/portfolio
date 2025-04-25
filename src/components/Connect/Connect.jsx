@@ -1,9 +1,6 @@
-import { sendEmail } from "../javascript/emai";
-
-// src/pages/Connect.jsx
 import React, { useState } from "react";
-
-import "../styles/connectStyle.css";
+import { sendEmail } from "../../utils/email";
+import "./Connect.css";
 
 const Connect = () => {
   const [name, setName] = useState("");
