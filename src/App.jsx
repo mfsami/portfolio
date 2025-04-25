@@ -1,23 +1,26 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import FrontPage from "./pages/FrontPage";
-import SpaceVR from "./pages/SpaceVR";
-import Lucidity from "./pages/Lucidity";
-import WSL from "./pages/WSL";
-import ErrorPage from "./pages/ErrorPage";
+
+import FrontPage from "./pages/FrontPage/FrontPage";
+import SpaceVR from "./pages/SpaceVR/SpaceVR";
+import GraphiteProject from "./pages/Graphite/Graphite";
+import Lucidity from "./pages/Lucidity/Lucidity";
+import WSL from "./pages/WSL/WSL";
+import ErrorPage from "./pages/ErrorPage/ErrorPage";
+
+import "./styles/global.css";
 
 const App = () => {
   return (
-    <div>
-      <BrowserRouter>
-        <Routes>
-          <Route index element={<FrontPage />} />
-          <Route path="/SpaceVR" element={<SpaceVR />} />
-          <Route path="/Lucidity" element={<Lucidity />} />
-          <Route path="/WSL" element={<WSL />} />
-          <Route path="*" element={<ErrorPage />} />
-        </Routes>
-      </BrowserRouter>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<FrontPage />} />
+        <Route path="/spacevr" element={<SpaceVR />} />
+        <Route path="/graphite" element={<GraphiteProject />} />
+        <Route path="/lucidity" element={<Lucidity />} />
+        <Route path="/wsl" element={<WSL />} />
+        <Route path="*" element={<ErrorPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 

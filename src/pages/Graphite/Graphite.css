@@ -1,0 +1,184 @@
+/* GraphiteProject.css */
+
+/* Base styles and reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  background-color: #0f0f0f;
+  color: #ffffff;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+/* Typography */
+h1 {
+  font-size: 84px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  letter-spacing: -1px;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+p {
+  margin-bottom: 24px;
+  max-width: 720px;
+}
+
+/* Layout components */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.devices-showcase {
+  max-width: 500px;
+  margin: 0 auto 60px;
+}
+
+.devices-showcase img {
+  width: 100%;
+  height: auto;
+}
+
+.project-details {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.introduction,
+.challenges,
+.background-randomizer,
+.conclusion {
+  margin-bottom: 80px;
+}
+
+.feature-image {
+  max-width: 400px;
+  margin: 40px 0;
+}
+
+.feature-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+.next-project {
+  margin-top: 100px;
+  padding-top: 60px;
+  border-top: 1px solid #333;
+}
+
+.next-project-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.3s ease;
+}
+
+.next-project-link:hover {
+  opacity: 0.8;
+}
+
+.next-project-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.next-project-title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.next-project-name {
+  font-size: 24px;
+  color: #999;
+}
+
+.arrow {
+  margin-left: 10px;
+}
+
+.next-project-image {
+  max-width: 200px;
+}
+
+.next-project-image img {
+  width: 100%;
+  height: auto;
+}
+
+.back-to-top {
+  display: inline-block;
+  margin-top: 40px;
+  color: #999;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.back-to-top:hover {
+  color: #ffffff;
+}
+
+/* Challenge list styling */
+ul {
+  list-style-type: none;
+  margin-bottom: 30px;
+}
+
+li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+
+li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #999;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 60px;
+  }
+
+  .project-details {
+    grid-template-columns: 1fr;
+  }
+
+  .next-project-link {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+}

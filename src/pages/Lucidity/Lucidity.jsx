@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/spaceStyle.css";
+// import "../styles/spaceStyle.css";
 
 const Lucidity = () => {
   return (
