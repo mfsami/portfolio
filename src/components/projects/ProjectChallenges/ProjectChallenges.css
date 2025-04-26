@@ -1,0 +1,29 @@
+.project-challenges {
+  margin: 100px 0;
+}
+
+.challenges-list {
+  list-style: none;
+  padding: 0;
+  max-width: 700px;
+}
+
+.challenge-item {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: flex-start;
+  font-weight: 300;
+}
+
+.challenge-bullet {
+  margin-right: 10px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.challenges-line {
+  border-top: 1px solid #313131;
+  margin: 90px 0;
+  width: 100%;
+}

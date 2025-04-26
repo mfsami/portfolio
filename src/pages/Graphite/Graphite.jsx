@@ -2,6 +2,10 @@ import React, { useEffect } from "react";
 import "./Graphite.css";
 import { Link } from "react-router-dom";
 
+import ProjectHeader from "../../components/projects/ProjectHeader/ProjectHeader";
+import ProjectIntro from "../../components/projects/ProjectIntro/ProjectIntro";
+import ProjectChallenges from "../../components/projects/ProjectChallenges/ProjectChallenges";
+
 const Graphite = () => {
   useEffect(() => {
     // Scroll to top when page loads
@@ -70,11 +74,11 @@ const Graphite = () => {
 
         <ProjectChallenges content={challengesContent} />
 
-        <ProjectFeature content={featureContent} />
+        {/* <ProjectFeature content={featureContent} /> */}
 
-        <ProjectConclusion content={conclusionContent} />
+        {/* <ProjectConclusion content={conclusionContent} /> */}
 
-        <ProjectNavigation content={navigationContent} />
+        {/* <ProjectNavigation content={navigationContent} /> */}
       </main>
 
       <footer className="graphite-footer">
