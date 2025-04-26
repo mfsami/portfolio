@@ -5,6 +5,9 @@ import { Link } from "react-router-dom";
 import ProjectHeader from "../../components/projects/ProjectHeader/ProjectHeader";
 import ProjectIntro from "../../components/projects/ProjectIntro/ProjectIntro";
 import ProjectChallenges from "../../components/projects/ProjectChallenges/ProjectChallenges";
+import ProjectFeature from "../../components/projects/ProjectFeature/ProjectFeature";
+import ProjectConclusion from "../../components/projects/ProjectConclusion/ProjectConclusion";
+import ProjectNavigation from "../../components/projects/ProjectNavigation/ProjectNavigation";
 
 const Graphite = () => {
   useEffect(() => {
@@ -74,18 +77,18 @@ const Graphite = () => {
 
         <ProjectChallenges content={challengesContent} />
 
-        {/* <ProjectFeature content={featureContent} /> */}
+        <ProjectFeature content={featureContent} />
 
-        {/* <ProjectConclusion content={conclusionContent} /> */}
-
-        {/* <ProjectNavigation content={navigationContent} /> */}
+        <ProjectConclusion content={conclusionContent} />
       </main>
 
-      <footer className="graphite-footer">
+      <ProjectNavigation content={navigationContent} />
+
+      {/* <footer className="graphite-footer">
         <a href="#top" className="back-to-top">
           ↑ Back to top
         </a>
-      </footer>
+      </footer> */}
     </div>
   );
 };

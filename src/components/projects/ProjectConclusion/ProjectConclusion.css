@@ -1,0 +1,18 @@
+.project-conclusion {
+  margin: 100px 0;
+}
+
+.conclusion-content {
+  max-width: 700px;
+}
+
+.conclusion-paragraph {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+
+.conclusion-paragraph:last-child {
+  margin-bottom: 0;
+}
