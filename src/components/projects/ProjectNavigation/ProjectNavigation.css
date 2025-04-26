@@ -45,18 +45,18 @@
   position: absolute;
   bottom: 180px;
 
-  font-size: 60px;
-  font-weight: 550;
+  font-size: 58px;
+  font-weight: 580;
   color: black;
   margin: 0;
   letter-spacing: -2px;
 
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
 }
 
 .next-project-title {
-  font-size: 60px;
-  font-weight: 550;
+  font-size: 58px;
+  font-weight: 580;
   color: #000000;
   margin: 0;
   opacity: 0; /* Initially hidden */
@@ -70,7 +70,7 @@
 }
 
 .nav-width:hover .next-project-label {
-  transform: translateY(-40px);
+  transform: translateY(-35px);
 }
 
 .nav-width:hover .next-project-title {
