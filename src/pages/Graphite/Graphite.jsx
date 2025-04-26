@@ -1,127 +1,89 @@
-import React from "react";
-// import "../styles/spaceStyle.css";
+import React, { useEffect } from "react";
+import "./Graphite.css";
 import { Link } from "react-router-dom";
 
-const SpaceVR = () => {
+const Graphite = () => {
+  useEffect(() => {
+    // Scroll to top when page loads
+    window.scrollTo(0, 0);
+
+    // Set document title
+    document.title = "Graphite Project | Sami's Portfolio";
+  }, []);
+
+  const projectInfo = {
+    title: "Graphite",
+    role: "UX/UI Designer and App Developer",
+    team: "Team of 4",
+    timeline: "4 months",
+  };
+
+  const introContent = {
+    text: [
+      "Pixomatic is an image editing app mainly used to create social media graphics, collages, and postcards. While offering a wide array of tools, it wasn't quite optimized for newcomers, as confirmed by multiple first-time user experience tests. Users felt overwhelmed by the number of tools available, and many of these tools required some level of experience to achieve pleasant results.",
+      "One of our high-level goals was to refine the beginner's experience. We aimed to introduce beginner-friendly tools, simplify existing complex ones, and educate newcomers on their use — all while dealing with constraints set by legacy code and architecture. I was in charge of the UX, UI, and interaction design of the app.",
+    ],
+  };
+
+  const challengesContent = {
+    items: [
+      "How might we better introduce newcomers to app's capabilities?",
+      "How might we adapt existing tools to popular workflows?",
+      "How might we streamline typical workflows?",
+    ],
+  };
+
+  const featureContent = {
+    title: "Background Randomizer",
+    description: [
+      "The idea of this feature came up during one of our brainstorms: you select a photo, the app automatically removes its background and shuffles through a set of alternative backgrounds, presenting you with a random one as a result.",
+      "The goal was to present the core strength of an app, background removal, in a fun, easy, and delightful way.",
+    ],
+    // imagePath: "/path/to/feature-image.jpg", // You'll need to add this image
+  };
+
+  const conclusionContent = {
+    text: [
+      "These are just the highlights, though.",
+      "As a result of my work on Pixomatic, exported to North Star (number of images exported) doubled, ILTV increased by 2.5×, yearly revenue grew by 12%, and the app rating improved from 4.39 to 4.58.",
+      "Additionally, we did some quality-of-life improvements: created a unified color system for the app, transitioned to system fonts, unified navigation bars & introduced learning center with tutorials.",
+    ],
+  };
+
+  const navigationContent = {
+    nextProject: "VR SPACE",
+    nextProjectPath: "/spacevr",
+    // imagePath: "/path/to/next-project-image.jpg", // You'll need to add this image
+  };
+
   return (
-    <div className="container">
-      <header className="header">
-        <h1>VR SPACE EXPLORATION</h1>
-        <div className="devices-showcase">
-          {/* Placeholder image for devices */}
-          <img
-            src="https://placehold.co/500x400/333/white?text=VR+Space+Devices"
-            alt="VR Space Exploration on Meta Quest 3"
-          />
-        </div>
-      </header>
+    <div className="graphite-container">
+      <main className="graphite-content">
+        <ProjectHeader
+          title={projectInfo.title}
+          role={projectInfo.role}
+          team={projectInfo.team}
+          timeline={projectInfo.timeline}
+        />
 
-      <section className="project-details">
-        <div>
-          <h2>Role</h2>
-          <p>VR Developer</p>
-        </div>
+        <ProjectIntro content={introContent} />
 
-        <div>
-          <h2>Platform</h2>
-          <p>Meta Quest 3</p>
-        </div>
+        <ProjectChallenges content={challengesContent} />
 
-        <div>
-          <h2>Technology</h2>
-          <p>Unity / C#</p>
-        </div>
-      </section>
+        <ProjectFeature content={featureContent} />
 
-      <section className="introduction">
-        <h2>Introduction</h2>
-        <p>
-          In the ever-evolving landscape of virtual reality, I embarked on an
-          exciting journey to create a VR space exploration experience.
-          Developed with C# and Unity for the Meta Quest 3, this project pushed
-          the boundaries of immersive design. It was not just about creating an
-          interactive virtual world but ensuring a seamless and engaging
-          experience that captured the vastness of space.
-        </p>
-        <p>
-          This creative approach combined precise programming and
-          problem-solving to bring the concept to life, allowing users to
-          experience the wonders of space in an unprecedented way.
-        </p>
-      </section>
+        <ProjectConclusion content={conclusionContent} />
 
-      <section className="challenges">
-        <h2>Challenges</h2>
-        <ul>
-          <li>Creating realistic zero-gravity movement and physics</li>
-          <li>Optimizing performance while maintaining visual fidelity</li>
-          <li>Designing intuitive VR controls for space navigation</li>
-        </ul>
-      </section>
+        <ProjectNavigation content={navigationContent} />
+      </main>
 
-      <section className="background-randomizer">
-        <h2>Interactive Space Elements</h2>
-        <p>
-          One of the core features of this VR experience is the ability to
-          interact with celestial bodies. Users can grab, inspect, and
-          manipulate planets, asteroids, and other space objects with natural
-          hand gestures.
-        </p>
-        <p>
-          The physics system was carefully calibrated to provide a believable
-          sense of mass and inertia while maintaining the feeling of
-          zero-gravity environment.
-        </p>
-
-        <div className="feature-image">
-          {/* Placeholder image for feature */}
-          <img
-            src="https://placehold.co/400x450/333/white?text=Space+Interaction"
-            alt="Interactive Space Elements Feature"
-          />
-        </div>
-      </section>
-
-      <section className="conclusion">
-        <h2>Conclusion</h2>
-        <p>
-          This VR space exploration project demonstrates the potential of
-          virtual reality to create educational and engaging experiences. By
-          leveraging the capabilities of the Meta Quest 3 and applying advanced
-          programming techniques in Unity, the application offers users an
-          immersive journey through our solar system and beyond.
-        </p>
-        <p>
-          The project has been well-received by early testers, who particularly
-          praised the intuitive controls and the sense of scale and wonder the
-          experience evokes.
-        </p>
-      </section>
-
-      <section className="next-project">
-        <Link to="/Lucidity" className="next-project-link">
-          <div className="next-project-text">
-            <div className="next-project-title">
-              Next Project <span className="arrow">→</span>
-            </div>
-            <div className="next-project-name">LUCIDITY</div>
-          </div>
-
-          <div className="next-project-image">
-            {/* Placeholder image for next project */}
-            <img
-              src="https://placehold.co/200x150/333/white?text=Lucidity"
-              alt="Lucidity Project Preview"
-            />
-          </div>
-        </Link>
-      </section>
-
-      <a href="#" className="back-to-top">
-        ↑ Back to top
-      </a>
+      <footer className="graphite-footer">
+        <a href="#top" className="back-to-top">
+          ↑ Back to top
+        </a>
+      </footer>
     </div>
   );
 };
 
-export default SpaceVR;
+export default Graphite;

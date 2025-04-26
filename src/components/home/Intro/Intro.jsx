@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import "./Intro.css";
-import dude from "../../assets/images/luhdude.svg";
+import dude from "../../../assets/images/luhdude.svg";
 import Typewriter from "typewriter-effect/dist/core";
 
 const Intro = () => {

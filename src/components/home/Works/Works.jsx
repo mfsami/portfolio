@@ -1,8 +1,8 @@
 import React from "react";
 import "./Works.css";
-import asteriks from "../../assets/images/asteriks.png";
+import asteriks from "../../../assets/images/asteriks.png";
 import { Link } from "react-router-dom";
-import { useIntersectionObserver } from "../../utils/useIntersectionObserver";
+import { useIntersectionObserver } from "../../../utils/useIntersectionObserver";
 
 const Works = () => {
   const { addToRefs } = useIntersectionObserver({
@@ -41,9 +41,9 @@ const Works = () => {
 
       <div className="line"></div>
 
-      <Link to="/WSL" className="work-item translateFX">
+      <Link to="/Graphite" className="work-item translateFX">
         <h3 ref={addToRefs} className="work-text hidden delay-4">
-          PROJECT
+          GRAPHITE
         </h3>
       </Link>
 
